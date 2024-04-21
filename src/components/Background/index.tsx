@@ -1,6 +1,6 @@
 import backgroundImg1 from "../../assets/image 1.png";
 import backgroundImg2 from "../../assets/image 3.png";
-import BottomGradient from "../BottomGradient";
+import MiddleAd from "../MiddleAd/index.";
 import * as S from "./style";
 
 const Background = () => {
@@ -11,6 +11,7 @@ const Background = () => {
         <S.BackgroundImg src={backgroundImg2} alt="background2" />
       </S.ImgContainer>
       <S.BackgroundGradient />
+      <MiddleAd />
     </S.ContainerBackground>
   );
 };

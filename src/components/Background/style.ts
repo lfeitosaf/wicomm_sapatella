@@ -15,6 +15,8 @@ export const ImgContainer = styled.div`
 `;
 
 export const BackgroundImg = styled.img`
+  width: 100%;
+  height: 100%;
   flex: 1;
 `;
 
