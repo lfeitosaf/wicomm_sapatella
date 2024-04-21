@@ -10,8 +10,8 @@ const UserMenu = () => {
     <S.MenuList>
       <SearchBar />
       <Icon src={userIcon} alt="User Icon" />
-      <Icon src={heartIcon} alt="User Icon" />
-      <Icon src={cartIcon} alt="User Icon" />
+      <Icon src={heartIcon} alt="Heart Icon" />
+      <Icon src={cartIcon} alt="Cart Icon" />
     </S.MenuList>
   );
 };
