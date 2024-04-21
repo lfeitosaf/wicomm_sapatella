@@ -1,5 +1,6 @@
 const typography = {
   sizes: {
+    very_tiny: "10px",
     tiny: "12px",
     small: "14px",
     normal: "16px",
