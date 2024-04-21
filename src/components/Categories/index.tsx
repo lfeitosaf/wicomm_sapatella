@@ -8,6 +8,7 @@ import sandalsIcon from "../../assets/image 21.png";
 import platformIcon from "../../assets/image 22.png";
 import bootsIcon from "../../assets/image 23.png";
 import flatIcon from "../../assets/image 24.png";
+import TextButton from "../TextButton";
 
 interface Category {
   id: number;
@@ -40,7 +41,9 @@ const Categories = () => {
         {CategoriesArray.map((category) => (
           <S.CategoryItem key={category.id}>
             <Icon src={category.image} alt={category.alt} size={162} />
-            <Text color={theme.colors.brand.gray}>{category.alt}</Text>
+            <TextButton color={theme.colors.brand.gray}>
+              {category.alt}
+            </TextButton>
           </S.CategoryItem>
         ))}
       </S.CategoriesList>
