@@ -1,4 +1,5 @@
 import Background from "../../components/Background";
+import Categories from "../../components/Categories";
 import Header from "../../components/Header";
 import PromoCards from "../../components/PromoCards";
 import * as S from "./styles";
@@ -9,6 +10,7 @@ function Home() {
       <Header />
       <Background />
       <PromoCards />
+      <Categories />
     </S.Container>
   );
 }
