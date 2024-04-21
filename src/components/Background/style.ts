@@ -6,7 +6,5 @@ export const ContainerBackground = styled.div`
 `;
 
 export const BackgroundImg = styled.img`
-  height: 640;
-  width: 680;
   flex: 1;
 `;
