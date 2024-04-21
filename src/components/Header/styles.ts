@@ -9,7 +9,6 @@ export const Dashboard = styled.header`
   flex-direction: row;
   align-items: center;
   border: 0px 0px 1px 0px;
-  background: rgb(85, 85, 85);
   background: linear-gradient(
     180deg,
     rgba(22, 22, 22, 1) 0%,
@@ -19,4 +18,5 @@ export const Dashboard = styled.header`
   ::placeholder {
     color: #d3d3d3;
   }
+  z-index: 1;
 `;
