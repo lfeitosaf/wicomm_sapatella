@@ -18,7 +18,7 @@ export const SearchInput = styled.input`
   width: 170px;
   background-color: rgba(211, 211, 211, 0);
   color: ${({ theme }) => theme.colors.brand.white};
-  font-size: 16px;
+  font-size: ${({ theme }) => theme.typography.sizes.normal};
   height: 24px;
   outline: none;
   border: none;

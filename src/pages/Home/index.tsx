@@ -1,10 +1,12 @@
+import Background from "../../components/Background";
 import Header from "../../components/Header";
 import * as S from "./styles";
 
 function Home() {
   return (
     <S.Container>
-      <Header></Header>
+      <Header />
+      <Background />
     </S.Container>
   );
 }
