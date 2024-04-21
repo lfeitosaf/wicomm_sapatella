@@ -6,7 +6,6 @@ interface PinkButtonProps {
 }
 
 export const PinkButton = styled.button<PinkButtonProps>`
-  padding: 8px 16px;
   background-color: ${({ theme }) => theme.colors.brand.pink};
   color: ${({ theme }) => theme.colors.brand.white};
   border: none;

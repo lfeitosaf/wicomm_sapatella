@@ -64,8 +64,8 @@ export const AdButton = styled.button`
   top: 100%;
   left: 50%;
   transform: translate(-50%, -50%);
-  :hover {
-    background-color: ${({ theme }) => theme.colors.brand.dark_pink};
-  }
   z-index: 2;
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.brand.light_pink};
+  }
 `;
