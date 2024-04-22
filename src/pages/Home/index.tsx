@@ -1,5 +1,7 @@
+import AboutUs from "../../components/AboutUs";
 import Background from "../../components/Background";
 import BirkensOffer from "../../components/BirkensOffer";
+import BottomBanner from "../../components/BottomBanner";
 import BottomCarousel from "../../components/BottomCarousel";
 import Categories from "../../components/Categories";
 import Favorites from "../../components/Favorites";
@@ -19,6 +21,8 @@ function Home() {
       <Favorites />
       <BirkensOffer />
       <BottomCarousel />
+      <BottomBanner />
+      <AboutUs />
     </S.Container>
   );
 }
