@@ -10,10 +10,10 @@ interface Menu {
 const MenuArray: Menu[] = [
   { id: 1, title: "Novidades" },
   { id: 2, title: "Sapatos" },
-  { id: 2, title: "Sandálias" },
-  { id: 3, title: "Tênis" },
-  { id: 4, title: "Bolsas & Acessórios" },
-  { id: 5, title: "OFF" },
+  { id: 3, title: "Sandálias" },
+  { id: 4, title: "Tênis" },
+  { id: 5, title: "Bolsas & Acessórios" },
+  { id: 6, title: "OFF" },
 ];
 
 const Menu = () => {

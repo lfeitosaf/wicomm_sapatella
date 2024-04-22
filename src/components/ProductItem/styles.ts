@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Card = styled.li`
   display: flex;
   flex-direction: column;
-  height: 370px;
+  height: 420px;
   position: relative;
 `;
 
@@ -41,6 +41,7 @@ export const Button = styled.button`
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
+  transition: 1;
 `;
 
 export const Image = styled.img`

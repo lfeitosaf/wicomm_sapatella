@@ -1,9 +1,15 @@
-import AdImg from "../../assets/image 2.png";
 import * as S from "./style";
 import { useTheme } from "styled-components";
 import Text from "../Text";
 
-const MiddleAd = () => {
+interface ImageProps {
+  image: {
+    src: string;
+    alt: string;
+  };
+}
+
+const MiddleAd = ({ image }: ImageProps) => {
   const theme = useTheme();
   return (
     <S.MainContainer>
@@ -36,7 +42,7 @@ const MiddleAd = () => {
             </S.AdSecondTitle>
           </S.SpanDiv>
         </S.AdSection>
-        <img src={AdImg} />
+        <img src={image.src} />
         <S.AdButton>
           <Text
             size={theme.typography.sizes.normal}
