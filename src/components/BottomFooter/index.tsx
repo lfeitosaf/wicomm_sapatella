@@ -12,7 +12,7 @@ const BottomFooter = () => {
       <S.MainContainer>
         <S.TextDiv>
           <Text
-            size={theme.typography.sizes.very_small}
+            size={theme.typography.sizes.small}
             color={theme.colors.brand.gray}
           >
             Somos Sonho LTA - Estrada do Campo D'areia, 182 - Pechincha - Rio de

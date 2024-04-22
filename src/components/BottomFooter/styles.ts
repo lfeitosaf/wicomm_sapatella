@@ -20,6 +20,7 @@ export const MainContainer = styled.footer`
 export const TextDiv = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
 `;
 
 export const LogoDiv = styled.div`
