@@ -66,3 +66,18 @@ export const SpanOff = styled.span`
   justify-content: center;
   align-items: center;
 `;
+
+export const HeartIcon = styled.img`
+  display: flex;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  z-index: 2;
+  color: ${({ theme }) => theme.colors.brand.white};
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+`;

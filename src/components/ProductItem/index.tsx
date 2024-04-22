@@ -3,17 +3,37 @@ import sneakerIcon from "../../assets/image 5.png";
 import Text from "../Text";
 import { useTheme } from "styled-components";
 import SizesList from "../SizesList";
+import heartIcon from "../../assets/heart2.png";
+import pinkHeart from "../../assets/heart3.png";
+import { useState } from "react";
 
 const ProductItem = () => {
   const theme = useTheme();
+  const [isFavorite, setIsFavorite] = useState(false);
+  const [isCardHovered, setIsCardHovered] = useState(false);
+
+  const handleHeartClick = () => {
+    setIsFavorite(!isFavorite);
+  };
 
   return (
-    <S.Card>
+    <S.Card
+      onMouseEnter={() => setIsCardHovered(true)}
+      onMouseLeave={() => setIsCardHovered(false)}
+    >
       <S.DivHeader>
         <S.SpanOff>30% OFF</S.SpanOff>
+        <S.HeartIcon
+          onClick={handleHeartClick}
+          src={isFavorite ? pinkHeart : heartIcon}
+        />
         <S.Image src={sneakerIcon} alt="sneakerIcon" />
-        <SizesList />
-        <S.Button>Adicionar à sacola</S.Button>
+        {isCardHovered && (
+          <>
+            <SizesList />
+            <S.Button>Adicionar à sacola</S.Button>
+          </>
+        )}
       </S.DivHeader>
       <S.DivBody>
         <Text
