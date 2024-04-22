@@ -1,3 +1,4 @@
+import AboutUs from "../../components/AboutUs";
 import Background from "../../components/Background";
 import BirkensOffer from "../../components/BirkensOffer";
 import BottomBanner from "../../components/BottomBanner";
@@ -21,6 +22,7 @@ function Home() {
       <BirkensOffer />
       <BottomCarousel />
       <BottomBanner />
+      <AboutUs />
     </S.Container>
   );
 }
