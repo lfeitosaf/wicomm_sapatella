@@ -141,7 +141,15 @@ const Favorites = () => {
         Favoritos da Semana
       </Text>
       <S.FavoritesListWrapper>
-        <Swiper slidesPerView={4} pagination={{ clickable: true }} navigation>
+        <Swiper
+          slidesPerView={4}
+          pagination={{
+            clickable: true,
+            dynamicBullets: true,
+            dynamicMainBullets: 2,
+          }}
+          navigation
+        >
           {FavoritesArray.map((product) => (
             <SwiperSlide key={product.id}>
               <ProductItem product={product} />
