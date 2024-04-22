@@ -6,10 +6,7 @@ import sneakerIcon from "../../assets/image 6.png";
 import sandalsIcon from "../../assets/image 7.png";
 import platformIcon from "../../assets/image 8.png";
 import ProductItem from "../ProductItem";
-import { LeftButton, RightButton } from "../SizesList/styles";
-import arrow from "../../assets/chevron-left-alt.png";
-import { useRef } from "react";
-import CarouselFooter from "../CarouselFooter";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 interface Favorite {
   id: number;
@@ -134,21 +131,6 @@ const FavoritesArray: Favorite[] = [
 
 const Favorites = () => {
   const theme = useTheme();
-  const carousel = useRef<HTMLUListElement>(null);
-
-  const handleLeftClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    if (carousel.current) {
-      carousel.current.scrollLeft -= carousel.current.offsetWidth;
-    }
-  };
-
-  const handleRightClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    if (carousel.current) {
-      carousel.current.scrollLeft += carousel.current.offsetWidth;
-    }
-  };
 
   return (
     <S.FavoritesSection>
@@ -159,21 +141,16 @@ const Favorites = () => {
         Favoritos da Semana
       </Text>
       <S.FavoritesListWrapper>
-        <LeftButton onClick={handleLeftClick}>
-          <img src={arrow} alt="Scroll Left" />
-        </LeftButton>
-        <S.FavoritesList ref={carousel}>
+        <Swiper slidesPerView={4} pagination={{ clickable: true }} navigation>
           {FavoritesArray.map((product) => (
-            <ProductItem key={product.id} product={product} />
+            <SwiperSlide key={product.id}>
+              <ProductItem product={product} />
+            </SwiperSlide>
           ))}
-        </S.FavoritesList>
-        <RightButton onClick={handleRightClick}>
-          {" "}
-          <img src={arrow} alt="Scroll Right" />
-        </RightButton>
+        </Swiper>
       </S.FavoritesListWrapper>
-      <CarouselFooter />
     </S.FavoritesSection>
   );
 };
+
 export default Favorites;

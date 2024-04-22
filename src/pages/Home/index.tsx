@@ -1,7 +1,6 @@
 import Background from "../../components/Background";
 import Categories from "../../components/Categories";
 import Favorites from "../../components/Favorites";
-import FavoritesTest from "../../components/Favorites copy";
 import Header from "../../components/Header";
 import PromoCards from "../../components/PromoCards";
 import SandalOffer from "../../components/SandalOffer";
@@ -15,7 +14,7 @@ function Home() {
       <PromoCards />
       <Categories />
       <SandalOffer />
-      <FavoritesTest />
+      <Favorites />
     </S.Container>
   );
 }
