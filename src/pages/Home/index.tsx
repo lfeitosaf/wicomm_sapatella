@@ -5,6 +5,7 @@ import BottomBanner from "../../components/BottomBanner";
 import BottomCarousel from "../../components/BottomCarousel";
 import Categories from "../../components/Categories";
 import Favorites from "../../components/Favorites";
+import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import PromoCards from "../../components/PromoCards";
 import Register from "../../components/Register";
@@ -25,6 +26,7 @@ function Home() {
       <BottomBanner />
       <AboutUs />
       <Register />
+      <Footer />
     </S.Container>
   );
 }

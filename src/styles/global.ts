@@ -8,6 +8,7 @@ const globalStyle = createGlobalStyle`
         margin: 0;
         box-sizing: border-box;
         font-family: "DM Sans", sans-serif;
+        list-style: none;
         font-weight: 400;
         font-style: normal;
         --swiper-navigation-size: 10px;
