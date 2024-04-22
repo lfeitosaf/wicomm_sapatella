@@ -73,7 +73,7 @@ const BirkensOffer = () => {
           >
             Conferir
           </Text>
-          <img src={filledArrowImg} />
+          <S.styledArrow src={filledArrowImg} />
         </S.checkDiv>
       </S.thirdColumn>
     </S.BirkensSection>

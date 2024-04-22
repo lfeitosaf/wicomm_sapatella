@@ -65,12 +65,17 @@ export const sneakersDiv = styled.div`
   justify-content: center;
   width: 250px;
   gap: 8px;
+  align-items: center;
 `;
 
 export const checkDiv = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: row;
   gap: 16px;
+  margin-top: 5px;
+  line-height: 48px;
 `;
 
 export const sneakersDesc = styled.p`
@@ -80,4 +85,9 @@ export const sneakersDesc = styled.p`
   text-indent: 15px;
   font-size: 12px;
   color: ${({ theme }) => theme.colors.brand.gray};
+`;
+
+export const styledArrow = styled.img`
+  height: 12px;
+  width: 16px;
 `;
