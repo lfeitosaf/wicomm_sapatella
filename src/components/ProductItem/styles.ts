@@ -36,24 +36,24 @@ export const Button = styled.button`
   transition: background-color 0.3s ease;
   width: 277px;
   height: 32px;
-  position: absolute; /* Adicionando posição absoluta */
-  bottom: 0; /* Alinhando na parte inferior */
-  left: 50%; /* Alinhando no centro */
-  transform: translateX(-50%); /* Centralizando horizontalmente */
-  z-index: 2; /* Garantindo que o botão fique por cima da imagem */
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
 `;
 
 export const Image = styled.img`
-  position: absolute; /* Adicionando posição absoluta */
+  position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Para garantir que a imagem cubra todo o espaço */
-  z-index: 1; /* Garantindo que a imagem fique abaixo do botão */
+  object-fit: cover;
+  z-index: 1;
 `;
 
 export const SpanOff = styled.span`
   display: flex;
-  position: absolute; /* Adicionando posição absoluta */
+  position: absolute;
   text-align: center;
   width: 64px;
   height: 24px;

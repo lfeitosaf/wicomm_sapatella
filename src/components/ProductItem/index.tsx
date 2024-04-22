@@ -2,6 +2,7 @@ import * as S from "./styles";
 import sneakerIcon from "../../assets/image 5.png";
 import Text from "../Text";
 import { useTheme } from "styled-components";
+import SizesList from "../SizesList";
 
 const ProductItem = () => {
   const theme = useTheme();
@@ -11,6 +12,7 @@ const ProductItem = () => {
       <S.DivHeader>
         <S.SpanOff>30% OFF</S.SpanOff>
         <S.Image src={sneakerIcon} alt="sneakerIcon" />
+        <SizesList />
         <S.Button>Adicionar à sacola</S.Button>
       </S.DivHeader>
       <S.DivBody>
