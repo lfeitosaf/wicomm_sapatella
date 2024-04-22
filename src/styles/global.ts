@@ -33,13 +33,10 @@ const globalStyle = createGlobalStyle`
     }
     .swiper-pagination-bullet-active{
         background-color: #CF215B;
-
         width: 16px;
         height: 8px;
     }
-    .swiper-pagination-bullet-inactive{
-        background-color: #D3D3D3;
-    }
+ 
 
 
     html, body {

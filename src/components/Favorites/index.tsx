@@ -18,7 +18,7 @@ interface Favorite {
   installments: string;
 }
 
-const FavoritesArray: Favorite[] = [
+export const FavoritesArray: Favorite[] = [
   {
     id: 1,
     src: purseIcon,

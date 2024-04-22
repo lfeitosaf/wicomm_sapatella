@@ -4,7 +4,6 @@ export const BirkensSection = styled.section`
   display: flex;
   height: 598px;
   flex-direction: row;
-  align-items: top;
   justify-content: center;
   gap: 20px;
 `;
