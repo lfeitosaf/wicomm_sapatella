@@ -7,7 +7,7 @@ export const SizeDiv = styled.div`
   justify-content: center;
   height: 68px;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.6);
   position: absolute;
   z-index: 2;
   bottom: 32px;
@@ -51,14 +51,15 @@ export const NumberLi = styled.div`
   background-color: #ffffff;
   border: solid 1px ${({ theme }) => theme.colors.brand.white};
   cursor: pointer;
-
   &.selected {
     background-color: ${({ theme }) => theme.colors.brand.pink};
+    border: solid 1px ${({ theme }) => theme.colors.brand.pink};
     color: #ffffff;
   }
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.brand.pink};
+    border: solid 1px ${({ theme }) => theme.colors.brand.pink};
     color: #ffffff;
   }
   flex: none;

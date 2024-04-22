@@ -6,10 +6,14 @@ import sneakerIcon from "../../assets/image 6.png";
 import sandalsIcon from "../../assets/image 7.png";
 import platformIcon from "../../assets/image 8.png";
 import ProductItem from "../ProductItem";
+import { LeftButton, RightButton } from "../SizesList/styles";
+import arrow from "../../assets/chevron-left-alt.png";
+import { useRef } from "react";
+import CarouselFooter from "../CarouselFooter";
 
 interface Favorite {
   id: number;
-  image: string;
+  src: string;
   alt: string;
   size: number;
   price: string;
@@ -17,83 +21,134 @@ interface Favorite {
   installments: string;
 }
 
-const FavoritesArray: Favorite[] = [
+export const FavoritesArray: Favorite[] = [
   {
     id: 1,
-    image: purseIcon,
+    src: purseIcon,
     alt: "Tênis Clean Urbano - Branco",
     size: 277,
     price: "R$169,90",
-    formerPrice: "RS209,90",
+    formerPrice: "R̶$̶ ̶2̶0̶9̶,̶9̶0̶",
     installments: "ou 6x de R$ 28,31 sem juros",
   },
   {
     id: 2,
-    image: sneakerIcon,
+    src: sneakerIcon,
     alt: "Sandália Soft Metalizado - Preta",
     size: 277,
     price: "R$169,90",
-    formerPrice: "RS209,90",
+    formerPrice: "R̶$̶ ̶2̶0̶9̶,̶9̶0̶",
     installments: "ou 6x de R$ 28,31 sem juros",
   },
   {
     id: 3,
-    image: sandalsIcon,
+    src: sandalsIcon,
     alt: "Sapatilha Elegance - Rose",
     size: 277,
     price: "R$169,90",
-    formerPrice: "RS209,90",
+    formerPrice: "R̶$̶ ̶2̶0̶9̶,̶9̶0̶",
     installments: "ou 6x de R$ 28,31 sem juros",
   },
   {
     id: 4,
-    image: platformIcon,
+    src: platformIcon,
     alt: "Plataforma em Nobuck - Whisky",
     size: 277,
     price: "R$169,90",
-    formerPrice: "RS209,90",
+    formerPrice: "R̶$̶ ̶2̶0̶9̶,̶9̶0̶",
     installments: "ou 6x de R$ 28,31 sem juros",
   },
   {
     id: 5,
-    image: purseIcon,
+    src: purseIcon,
     alt: "Bolsas",
     size: 277,
     price: "R$169,90",
-    formerPrice: "RS209,90",
+    formerPrice: "R̶$̶ ̶2̶0̶9̶,̶9̶0̶",
     installments: "ou 6x de R$ 28,31 sem juros",
   },
   {
     id: 6,
-    image: sneakerIcon,
+    src: sneakerIcon,
     alt: "Tênis",
     size: 277,
     price: "R$169,90",
-    formerPrice: "RS209,90",
+    formerPrice: "R̶$̶ ̶2̶0̶9̶,̶9̶0̶",
     installments: "ou 6x de R$ 28,31 sem juros",
   },
   {
     id: 7,
-    image: sandalsIcon,
+    src: sandalsIcon,
     alt: "Rasteiras",
     size: 277,
     price: "R$169,90",
-    formerPrice: "RS209,90",
+    formerPrice: "R̶$̶ ̶2̶0̶9̶,̶9̶0̶",
     installments: "ou 6x de R$ 28,31 sem juros",
   },
   {
     id: 8,
-    image: platformIcon,
+    src: platformIcon,
     alt: "Plataformas",
     size: 277,
     price: "R$169,90",
-    formerPrice: "RS209,90",
+    formerPrice: "R̶$̶ ̶2̶0̶9̶,̶9̶0̶",
+    installments: "ou 6x de R$ 28,31 sem juros",
+  },
+  {
+    id: 9,
+    src: purseIcon,
+    alt: "Bolsas",
+    size: 277,
+    price: "R$169,90",
+    formerPrice: "R̶$̶ ̶2̶0̶9̶,̶9̶0̶",
+    installments: "ou 6x de R$ 28,31 sem juros",
+  },
+  {
+    id: 10,
+    src: sneakerIcon,
+    alt: "Tênis",
+    size: 277,
+    price: "R$169,90",
+    formerPrice: "R̶$̶ ̶2̶0̶9̶,̶9̶0̶",
+    installments: "ou 6x de R$ 28,31 sem juros",
+  },
+  {
+    id: 11,
+    src: sandalsIcon,
+    alt: "Rasteiras",
+    size: 277,
+    price: "R$169,90",
+    formerPrice: "R̶$̶ ̶2̶0̶9̶,̶9̶0̶",
+    installments: "ou 6x de R$ 28,31 sem juros",
+  },
+  {
+    id: 12,
+    src: platformIcon,
+    alt: "Plataformas",
+    size: 277,
+    price: "R$169,90",
+    formerPrice: "R̶$̶ ̶2̶0̶9̶,̶9̶0̶",
     installments: "ou 6x de R$ 28,31 sem juros",
   },
 ];
 
 const Favorites = () => {
   const theme = useTheme();
+  const carousel = useRef<HTMLUListElement>(null);
+
+  const handleLeftClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    if (carousel.current) {
+      carousel.current.scrollLeft -= carousel.current.offsetWidth;
+    }
+  };
+
+  const handleRightClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    if (carousel.current) {
+      carousel.current.scrollLeft += carousel.current.offsetWidth * 3;
+    }
+  };
 
   return (
     <S.FavoritesSection>
@@ -103,12 +158,21 @@ const Favorites = () => {
       >
         Favoritos da Semana
       </Text>
-      <S.FavoritesList>
-        <ProductItem />
-        <ProductItem />
-        <ProductItem />
-        <ProductItem />
-      </S.FavoritesList>
+      <S.FavoritesListWrapper>
+        <LeftButton onClick={handleLeftClick}>
+          <img src={arrow} alt="Scroll Left" />
+        </LeftButton>
+        <S.FavoritesList ref={carousel}>
+          {FavoritesArray.map((product) => (
+            <ProductItem key={product.id} product={product} />
+          ))}
+        </S.FavoritesList>
+        <RightButton onClick={handleRightClick}>
+          {" "}
+          <img src={arrow} alt="Scroll Right" />
+        </RightButton>
+      </S.FavoritesListWrapper>
+      <CarouselFooter />
     </S.FavoritesSection>
   );
 };

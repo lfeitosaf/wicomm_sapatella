@@ -1,5 +1,4 @@
 import * as S from "./styles";
-import sneakerIcon from "../../assets/image 5.png";
 import Text from "../Text";
 import { useTheme } from "styled-components";
 import SizesList from "../SizesList";
@@ -7,7 +6,18 @@ import heartIcon from "../../assets/heart2.png";
 import pinkHeart from "../../assets/heart3.png";
 import { useState } from "react";
 
-const ProductItem = () => {
+interface ProductProps {
+  product: {
+    src: string;
+    alt: string;
+    size: number;
+    price: string;
+    formerPrice: string;
+    installments: string;
+  };
+}
+
+const ProductItem = ({ product }: ProductProps) => {
   const theme = useTheme();
   const [isFavorite, setIsFavorite] = useState(false);
   const [isCardHovered, setIsCardHovered] = useState(false);
@@ -27,7 +37,7 @@ const ProductItem = () => {
           onClick={handleHeartClick}
           src={isFavorite ? pinkHeart : heartIcon}
         />
-        <S.Image src={sneakerIcon} alt="sneakerIcon" />
+        <S.Image src={product.src} alt={product.alt} />
         {isCardHovered && (
           <>
             <SizesList />
@@ -41,27 +51,27 @@ const ProductItem = () => {
           color={theme.colors.brand.gray}
           margin={"0px 0px 22px 0px"}
         >
-          Tênis Clean Urbano - Branco
+          {product.alt}
         </Text>
         <S.DivPrice>
           <Text
             size={theme.typography.sizes.normal}
             color={theme.colors.brand.gray}
           >
-            RS 169,90
+            {product.price}
           </Text>
           <Text
             size={theme.typography.sizes.small}
             color={theme.colors.brand.gray}
           >
-            R$ 209,90
+            ̶{product.formerPrice}
           </Text>
         </S.DivPrice>
         <Text
           size={theme.typography.sizes.tiny}
           color={theme.colors.brand.gray}
         >
-          ou 6x de R$ 28,31 sem juros
+          {product.installments}
         </Text>
       </S.DivBody>
     </S.Card>
