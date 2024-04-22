@@ -1,4 +1,5 @@
 import Background from "../../components/Background";
+import BirkensOffer from "../../components/BirkensOffer";
 import Categories from "../../components/Categories";
 import Favorites from "../../components/Favorites";
 import Header from "../../components/Header";
@@ -15,6 +16,7 @@ function Home() {
       <Categories />
       <SandalOffer />
       <Favorites />
+      <BirkensOffer />
     </S.Container>
   );
 }
