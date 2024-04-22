@@ -4,7 +4,6 @@ export const BirkensSection = styled.section`
   display: flex;
   height: 598px;
   flex-direction: row;
-  align-items: top;
   justify-content: center;
   gap: 20px;
 `;
@@ -15,13 +14,13 @@ export const firstColumn = styled.div`
   justify-content: space-between;
   gap: 24px;
   width: 376px;
-  margin-bottom: 100px;
+  margin-bottom: 102px;
 `;
 export const textsDiv = styled.div`
   display: flex;
   flex-direction: column;
   width: 228px;
-  gap: 12px;
+  gap: 8px;
   margin-top: 40px;
 `;
 

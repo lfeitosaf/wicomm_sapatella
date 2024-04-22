@@ -11,13 +11,13 @@ const globalStyle = createGlobalStyle`
         font-weight: 400;
         font-style: normal;
         --swiper-navigation-size: 10px;
-        --swiper-pagination-color: pink;
+        --swiper-pagination-color: #d3d3d3;
         --swiper-pagination-bullet-size: 8px;
         --swiper-pagination-bullet-active: 16px;
         --swiper-pagination-bullet-width: 8px;
         --swiper-pagination-bullet-height: 8px;
-        --swiper-pagination-bullet-inactive-color: #000;
-        --swiper-pagination-bullet-inactive-opacity: 0.2;
+        --swiper-pagination-bullet-inactive-color: #D3D3D3;
+        --swiper-pagination-bullet-inactive-opacity: 1;
         --swiper-pagination-bullet-opacity: 1;
         --swiper-pagination-bullet-horizontal-gap: 4px;
         --swiper-pagination-bullet-vertical-gap: 6px;
@@ -28,16 +28,15 @@ const globalStyle = createGlobalStyle`
     }
 
     .swiper-pagination-bullet{
+        background-color: #D3D3D3;
         border-radius: 0%;
-        background-color: #CF215B
     }
     .swiper-pagination-bullet-active{
+        background-color: #CF215B;
         width: 16px;
         height: 8px;
     }
-    .swiper-pagination-bullet-inactive{
-        background-color: #D3D3D3;
-    }
+ 
 
 
     html, body {
