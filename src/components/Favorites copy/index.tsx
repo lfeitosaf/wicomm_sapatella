@@ -10,6 +10,7 @@ import { LeftButton, RightButton } from "../SizesList/styles";
 import arrow from "../../assets/chevron-left-alt.png";
 import { useRef } from "react";
 import CarouselFooter from "../CarouselFooter";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 interface Favorite {
   id: number;
@@ -132,9 +133,9 @@ const FavoritesArray: Favorite[] = [
   },
 ];
 
-const Favorites = () => {
+const FavoritesTest = () => {
   const theme = useTheme();
-  const carousel = useRef<HTMLUListElement>(null);
+  const carousel = useRef<HTMLDivElement>(null);
 
   const handleLeftClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -159,21 +160,16 @@ const Favorites = () => {
         Favoritos da Semana
       </Text>
       <S.FavoritesListWrapper>
-        <LeftButton onClick={handleLeftClick}>
-          <img src={arrow} alt="Scroll Left" />
-        </LeftButton>
-        <S.FavoritesList ref={carousel}>
+        <Swiper slidesPerView={4} pagination={{ clickable: true }} navigation>
           {FavoritesArray.map((product) => (
-            <ProductItem key={product.id} product={product} />
+            <SwiperSlide key={product.id}>
+              <ProductItem product={product} />
+            </SwiperSlide>
           ))}
-        </S.FavoritesList>
-        <RightButton onClick={handleRightClick}>
-          {" "}
-          <img src={arrow} alt="Scroll Right" />
-        </RightButton>
+        </Swiper>
       </S.FavoritesListWrapper>
-      <CarouselFooter />
     </S.FavoritesSection>
   );
 };
-export default Favorites;
+
+export default FavoritesTest;

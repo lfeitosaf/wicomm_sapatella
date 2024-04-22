@@ -1,5 +1,4 @@
 import * as S from "./styles";
-import { FavoritesArray } from "../Favorites";
 
 const CarouselFooter = () => {
   return (

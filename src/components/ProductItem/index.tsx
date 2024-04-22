@@ -49,7 +49,7 @@ const ProductItem = ({ product }: ProductProps) => {
         <Text
           size={theme.typography.sizes.tiny}
           color={theme.colors.brand.gray}
-          margin={"0px 0px 22px 0px"}
+          margin={"0px 0px 20px 0px"}
         >
           {product.alt}
         </Text>
