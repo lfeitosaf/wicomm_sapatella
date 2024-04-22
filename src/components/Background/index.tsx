@@ -3,9 +3,9 @@ import backgroundImg2 from "../../assets/image 3.png";
 import MiddleAd from "../MiddleAd/index.";
 import * as S from "./style";
 import img1 from "../../assets/image 2.png";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-import Button from "../Button";
-import { Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css/autoplay";
 
 interface Image {
   id: number;
@@ -32,22 +32,22 @@ const ImagesArray: Image[] = [
 ];
 
 const Background = () => {
-  const swiper = useSwiper();
   return (
     <S.ContainerBackground>
       <S.SecondContainer>
         <Swiper
-          modules={[Navigation, Pagination]}
-          className="top-carousel"
+          modules={[Navigation, Pagination, Autoplay]}
           slidesPerView={1}
           pagination={{ clickable: true }}
+          className="special-swiper"
+          navigation
+          autoplay={{ delay: 3000, pauseOnMouseEnter: true }}
         >
           {ImagesArray.map((image) => (
             <SwiperSlide key={image.id}>
               <MiddleAd image={image} />
             </SwiperSlide>
           ))}
-          <S.ButtonPrev onClick={() => swiper.slidePrev()}>NEXT</S.ButtonPrev>
         </Swiper>
       </S.SecondContainer>
       <S.ImgContainer>
