@@ -37,7 +37,9 @@ const globalStyle = createGlobalStyle`
         width: 16px;
         height: 8px;
     }
- 
+    .swiper-container {
+    z-index: 999;
+    }
 
 
     html, body {
