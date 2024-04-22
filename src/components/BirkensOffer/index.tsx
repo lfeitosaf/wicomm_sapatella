@@ -21,13 +21,10 @@ const BirkensOffer = () => {
           >
             Rasteiras & Birkens
           </Text>
-          <Text
-            size={theme.typography.sizes.tiny}
-            color={theme.colors.brand.gray}
-          >
+          <S.birkensDesc>
             A categoria de Sandália Rasteira da Sapatella é um verdadeiro
             paraíso para os amantes de conforto e estilo.
-          </Text>
+          </S.birkensDesc>
           <S.birkensDiv>
             <Text
               size={theme.typography.sizes.normal}

@@ -21,7 +21,7 @@ export const textsDiv = styled.div`
   display: flex;
   flex-direction: column;
   width: 228px;
-  gap: 8px;
+  gap: 12px;
   margin-top: 40px;
 `;
 
@@ -30,8 +30,13 @@ export const birkensDiv = styled.div`
   flex-direction: row;
   align-items: center;
   gap: 16px;
-  margin-top: 26px;
   max-width: 228px;
+`;
+
+export const birkensDesc = styled.p`
+  font-size: ${({ theme }) => theme.typography.sizes.tiny};
+  color: ${({ theme }) => theme.colors.brand.gray};
+  line-height: 15.62px;
 `;
 
 export const secondColumn = styled.div`
