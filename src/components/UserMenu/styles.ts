@@ -12,3 +12,22 @@ export const ItemList = styled.li`
   color: ${({ theme }) => theme.colors.brand.white};
   margin-right: 24px;
 `;
+
+export const StyledCartNumber = styled.div`
+  position: relative;
+  span {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: ${({ theme }) => theme.colors.brand.pink};
+    color: white;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    font-size: ${({ theme }) => theme.typography.sizes.very_tiny};
+  }
+`;

@@ -56,11 +56,11 @@ const Footer = () => {
       <S.MainContainer>
         <S.SecondaryContainer>
           <S.LogoDiv>
-            <img src={logo} />
+            <S.MiniLogo src={logo} />
             <S.MiniLogosDiv>
-              <img src={igLogo} />
-              <img src={wppLogo} />
-              <img src={fbLogo} />
+              <S.MiniLogo src={igLogo} />
+              <S.MiniLogo src={wppLogo} />
+              <S.MiniLogo src={fbLogo} />
             </S.MiniLogosDiv>
           </S.LogoDiv>
           <S.MenuFooter>

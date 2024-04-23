@@ -5,4 +5,5 @@ export const StyledText = styled.p<TextProps>`
   font-size: ${(props) => props.size || "16px"};
   color: ${(props) => props.color || "black"};
   cursor: pointer;
+  background-color: transparent;
 `;

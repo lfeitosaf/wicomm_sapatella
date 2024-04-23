@@ -29,7 +29,7 @@ export const birkensDiv = styled.div`
   flex-direction: row;
   align-items: center;
   gap: 16px;
-  max-width: 228px;
+  cursor: pointer;
 `;
 
 export const birkensDesc = styled.p`
@@ -51,6 +51,7 @@ export const sandalsDiv = styled.div`
   flex-direction: row;
   align-items: center;
   gap: 16px;
+  cursor: pointer;
 `;
 
 export const thirdColumn = styled.div`
@@ -80,6 +81,7 @@ export const checkDiv = styled.div`
   gap: 16px;
   margin-top: 5px;
   line-height: 48px;
+  cursor: pointer;
 `;
 
 export const sneakersDesc = styled.p`

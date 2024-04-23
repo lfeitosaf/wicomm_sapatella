@@ -7,16 +7,8 @@ import sandalsIcon from "../../assets/image 7.png";
 import platformIcon from "../../assets/image 8.png";
 import ProductItem from "../ProductItem";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-interface Favorite {
-  id: number;
-  src: string;
-  alt: string;
-  size: number;
-  price: string;
-  formerPrice: string;
-  installments: string;
-}
+import { Favorite } from "./favorites.types";
+import { Dispatch, SetStateAction } from "react";
 
 export const FavoritesArray: Favorite[] = [
   {
@@ -129,7 +121,13 @@ export const FavoritesArray: Favorite[] = [
   },
 ];
 
-const Favorites = () => {
+type SetCartCount = Dispatch<SetStateAction<number>>;
+
+type FavoritesProps = {
+  setCartCount: SetCartCount;
+};
+
+const Favorites = ({ setCartCount }: FavoritesProps) => {
   const theme = useTheme();
 
   return (
@@ -149,10 +147,11 @@ const Favorites = () => {
             dynamicMainBullets: 2,
           }}
           navigation
+          autoplay={true}
         >
           {FavoritesArray.map((product) => (
             <SwiperSlide key={product.id}>
-              <ProductItem product={product} />
+              <ProductItem product={product} setCartCount={setCartCount} />
             </SwiperSlide>
           ))}
         </Swiper>

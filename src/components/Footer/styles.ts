@@ -75,3 +75,7 @@ export const SecurityTitle = styled.h2`
   color: ${({ theme }) => theme.colors.brand.gray};
   margin-top: 34px;
 `;
+
+export const MiniLogo = styled.img`
+  cursor: pointer;
+`;

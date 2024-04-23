@@ -1,6 +1,7 @@
 import * as S from "./style";
 import { useTheme } from "styled-components";
 import Text from "../Text";
+import { motion } from "framer-motion";
 
 interface ImageProps {
   image: {
@@ -43,14 +44,16 @@ const MiddleAd = ({ image }: ImageProps) => {
           </S.SpanDiv>
         </S.AdSection>
         <img src={image.src} />
-        <S.AdButton>
-          <Text
-            size={theme.typography.sizes.normal}
-            color={theme.colors.brand.white}
-          >
-            Conferir
-          </Text>
-        </S.AdButton>
+        <motion.div whileHover={{ scale: 1.2 }}>
+          <S.AdButton>
+            <Text
+              size={theme.typography.sizes.normal}
+              color={theme.colors.brand.white}
+            >
+              Conferir
+            </Text>
+          </S.AdButton>
+        </motion.div>
       </S.MainDiv>
     </S.MainContainer>
   );

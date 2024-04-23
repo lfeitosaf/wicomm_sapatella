@@ -3,12 +3,15 @@ import imgIcon from "../../assets/image 15.png";
 import { FavoritesArray } from "../Favorites";
 import ProductItem from "../ProductItem";
 import * as S from "./styles";
+import { motion } from "framer-motion";
 
-const BottomCarousel = () => {
+const BottomCarousel = ({ setCartCount }) => {
   return (
     <S.MainContainer>
       <S.SecondaryContainer>
-        <img src={imgIcon} />
+        <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+          <img src={imgIcon} />
+        </motion.div>
         <S.ProductsListWrapper>
           <Swiper
             slidesPerView={2}
@@ -22,7 +25,7 @@ const BottomCarousel = () => {
           >
             {FavoritesArray.map((product) => (
               <SwiperSlide key={product.id}>
-                <ProductItem product={product} />
+                <ProductItem product={product} setCartCount={setCartCount} />
               </SwiperSlide>
             ))}
           </Swiper>

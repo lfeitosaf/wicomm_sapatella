@@ -1,6 +1,7 @@
 import img from "../../assets/image 53.png";
 import Text from "../Text";
 import * as S from "./styles";
+import { motion } from "framer-motion";
 import { useTheme } from "styled-components";
 
 const AboutUs = () => {
@@ -26,7 +27,9 @@ const AboutUs = () => {
             somos amigas. Sapatella. Vamos juntas?
           </S.StyledText>
         </S.TextDiv>
-        <img src={img} />
+        <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+          <img src={img} />
+        </motion.div>
       </S.MainContainer>
     </S.AboutUsSection>
   );

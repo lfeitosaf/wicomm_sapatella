@@ -5,6 +5,7 @@ import filledArrowImg from "../../assets/filledarrow.png";
 import img1 from "../../assets/image 16.png";
 import img2 from "../../assets/image 12.png";
 import img3 from "../../assets/image 14.png";
+import { motion } from "framer-motion";
 
 import * as S from "./styles";
 
@@ -25,29 +26,33 @@ const BirkensOffer = () => {
             A categoria de Sandália Rasteira da Sapatella é um verdadeiro
             paraíso para os amantes de conforto e estilo.
           </S.birkensDesc>
-          <S.birkensDiv>
-            <Text
-              size={theme.typography.sizes.normal}
-              color={theme.colors.brand.gray}
-            >
-              Eu quero
-            </Text>
-            <img src={arrowImg} />
-          </S.birkensDiv>
+          <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            <S.birkensDiv>
+              <Text
+                size={theme.typography.sizes.normal}
+                color={theme.colors.brand.gray}
+              >
+                Eu quero
+              </Text>
+              <img src={arrowImg} />
+            </S.birkensDiv>
+          </motion.div>
         </S.textsDiv>
         <img src={img1} />
       </S.firstColumn>
       <S.secondColumn>
         <img src={img2} />
-        <S.sandalsDiv>
-          <Text
-            size={theme.typography.sizes.normal}
-            color={theme.colors.brand.gray}
-          >
-            Sandálias
-          </Text>
-          <img src={arrowImg} />
-        </S.sandalsDiv>
+        <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+          <S.sandalsDiv>
+            <Text
+              size={theme.typography.sizes.normal}
+              color={theme.colors.brand.gray}
+            >
+              Sandálias
+            </Text>
+            <img src={arrowImg} />
+          </S.sandalsDiv>
+        </motion.div>
       </S.secondColumn>
       <S.thirdColumn>
         <img src={img3} />
@@ -63,15 +68,17 @@ const BirkensOffer = () => {
             do dia a dia.
           </S.sneakersDesc>
         </S.sneakersDiv>
-        <S.checkDiv>
-          <Text
-            size={theme.typography.sizes.normal}
-            color={theme.colors.brand.gray}
-          >
-            Conferir
-          </Text>
-          <S.styledArrow src={filledArrowImg} />
-        </S.checkDiv>
+        <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+          <S.checkDiv>
+            <Text
+              size={theme.typography.sizes.normal}
+              color={theme.colors.brand.gray}
+            >
+              Conferir
+            </Text>
+            <S.styledArrow src={filledArrowImg} />
+          </S.checkDiv>
+        </motion.div>
       </S.thirdColumn>
     </S.BirkensSection>
   );
