@@ -2,6 +2,7 @@ import Button from "../Button";
 import Text from "../Text";
 import * as S from "./styles";
 import { useTheme } from "styled-components";
+import { motion } from "framer-motion";
 
 const Register = () => {
   const theme = useTheme();
@@ -26,9 +27,11 @@ const Register = () => {
         <S.InputDiv>
           <S.StyledInput placeholder="Nome" />
           <S.StyledInput placeholder="E-mail" />
-          <Button width={"178"} height={"40"}>
-            Cadastrar
-          </Button>
+          <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            <Button width={"178"} height={"40"}>
+              Cadastrar
+            </Button>
+          </motion.button>
         </S.InputDiv>
       </S.MainContainer>
     </S.RegisterSection>

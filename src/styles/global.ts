@@ -23,6 +23,14 @@ const globalStyle = createGlobalStyle`
         --swiper-pagination-bullet-horizontal-gap: 4px;
         --swiper-pagination-bullet-vertical-gap: 6px;
     }
+    .special-swiper .swiper-button-prev,
+    .special-swiper .swiper-button-next {
+        --swiper-navigation-size: 12px;
+        background: #D3D3D3;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
 
     .swiper-horizontal{
         margin-top: 20px;
@@ -37,7 +45,9 @@ const globalStyle = createGlobalStyle`
         width: 16px;
         height: 8px;
     }
- 
+    .swiper-container {
+    z-index: 999;
+    }
 
 
     html, body {

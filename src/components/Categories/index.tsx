@@ -9,6 +9,7 @@ import platformIcon from "../../assets/image 22.png";
 import bootsIcon from "../../assets/image 23.png";
 import flatIcon from "../../assets/image 24.png";
 import TextButton from "../TextButton";
+import { motion } from "framer-motion";
 
 interface Category {
   id: number;
@@ -39,12 +40,14 @@ const Categories = () => {
       </Text>
       <S.CategoriesList>
         {CategoriesArray.map((category) => (
-          <S.CategoryItem key={category.id}>
-            <Icon src={category.image} alt={category.alt} size={162} />
-            <TextButton color={theme.colors.brand.gray}>
-              {category.alt}
-            </TextButton>
-          </S.CategoryItem>
+          <motion.div whileHover={{ scale: 1.2 }}>
+            <S.CategoryItem key={category.id}>
+              <Icon src={category.image} alt={category.alt} size={162} />
+              <TextButton color={theme.colors.brand.gray}>
+                {category.alt}
+              </TextButton>
+            </S.CategoryItem>
+          </motion.div>
         ))}
       </S.CategoriesList>
     </S.CategoriesSection>

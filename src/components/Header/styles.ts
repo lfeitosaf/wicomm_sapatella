@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Dashboard = styled.header`
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 72px;
   display: flex;
@@ -17,6 +17,10 @@ export const Dashboard = styled.header`
   );
   ::placeholder {
     color: #d3d3d3;
+  }
+  &:hover {
+    transition: 0.3s;
+    background-color: black;
   }
   z-index: 1;
 `;

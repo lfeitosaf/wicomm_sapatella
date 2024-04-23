@@ -1,3 +1,4 @@
+import { useState } from "react";
 import AboutUs from "../../components/AboutUs";
 import Background from "../../components/Background";
 import BirkensOffer from "../../components/BirkensOffer";
@@ -13,16 +14,17 @@ import SandalOffer from "../../components/SandalOffer";
 import * as S from "./styles";
 
 function Home() {
+  const [cartCount, setCartCount] = useState<number>(0);
   return (
     <S.Container>
-      <Header />
+      <Header cartCount={cartCount} />
       <Background />
       <PromoCards />
       <Categories />
       <SandalOffer />
-      <Favorites />
+      <Favorites setCartCount={setCartCount} />
       <BirkensOffer />
-      <BottomCarousel />
+      <BottomCarousel setCartCount={setCartCount} />
       <BottomBanner />
       <AboutUs />
       <Register />

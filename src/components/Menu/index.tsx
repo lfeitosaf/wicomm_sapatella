@@ -1,6 +1,7 @@
 import { useTheme } from "styled-components";
 import * as S from "./styles";
 import TextButton from "../TextButton";
+import { motion } from "framer-motion";
 
 interface Menu {
   id: number;
@@ -21,9 +22,13 @@ const Menu = () => {
   return (
     <S.MenuList>
       {MenuArray.map((item) => (
-        <S.ItemList key={item.id}>
-          <TextButton color={theme.colors.brand.white}>{item.title}</TextButton>
-        </S.ItemList>
+        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.9 }}>
+          <S.ItemList key={item.id}>
+            <TextButton color={theme.colors.brand.white}>
+              {item.title}
+            </TextButton>
+          </S.ItemList>
+        </motion.div>
       ))}
     </S.MenuList>
   );

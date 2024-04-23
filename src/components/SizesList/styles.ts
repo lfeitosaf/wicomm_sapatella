@@ -10,9 +10,15 @@ export const SizeDiv = styled.div`
   background-color: rgba(255, 255, 255, 0.6);
   position: absolute;
   z-index: 2;
-  bottom: 32px;
   gap: 14px;
   border: solid 1px #d3d3d3;
+  bottom: -100px;
+  animation: surgir 0.5s forwards;
+  @keyframes surgir {
+    to {
+      bottom: 32px;
+    }
+  }
 `;
 
 export const NumbersListWrapper = styled.div`
@@ -83,4 +89,16 @@ export const RightButton = styled.button`
   border: none;
   cursor: pointer;
   transform: rotate(180deg);
+`;
+
+export const AnimationDiv = styled.div`
+  position: relative;
+  bottom: -100px;
+  animation: surgir 1s forwards;
+
+  @keyframes surgir {
+    to {
+      bottom: 0;
+    }
+  }
 `;

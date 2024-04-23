@@ -13,6 +13,7 @@ export const DivHeader = styled.div`
   width: 277px;
   margin-bottom: 12px;
   position: relative;
+  overflow: hidden;
 `;
 
 export const DivBody = styled.div`
@@ -37,7 +38,7 @@ export const Button = styled.button`
   width: 277px;
   height: 32px;
   position: absolute;
-  bottom: 0;
+  bottom: -32px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;

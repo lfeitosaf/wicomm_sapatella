@@ -1,3 +1,5 @@
+import * as S from "./style";
+
 const Icon = (props: {
   src: string;
   alt: string;
@@ -6,7 +8,7 @@ const Icon = (props: {
 }) => {
   const { src, alt, size = 24, margin = "0" } = props;
   return (
-    <img
+    <S.Img
       src={src}
       alt={alt}
       style={{ width: size, height: size, margin: margin }}

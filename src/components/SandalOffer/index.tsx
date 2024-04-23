@@ -3,6 +3,7 @@ import Text from "../Text";
 import imgSandalAd from "../../assets/Rectangle 79.png";
 import Button from "../Button";
 import * as S from "./styles";
+import { motion } from "framer-motion";
 
 const SandalOffer = () => {
   const theme = useTheme();
@@ -26,10 +27,14 @@ const SandalOffer = () => {
           conhecida por seu conforto, qualidade e design diferenciado.
         </Text>
         <Button width={"156"} height={"48"}>
-          {"É a minha cara"}
+          <motion.div whileHover={{ scale: 1.2 }}>
+            {"É a minha cara"}
+          </motion.div>
         </Button>
       </S.TextDiv>
-      <img src={imgSandalAd}></img>
+      <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+        <img src={imgSandalAd}></img>
+      </motion.div>
     </S.OfferSection>
   );
 };
