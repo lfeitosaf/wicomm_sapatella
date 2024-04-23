@@ -2,13 +2,9 @@ import { useTheme } from "styled-components";
 import * as S from "./styles";
 import TextButton from "../TextButton";
 import { motion } from "framer-motion";
+import { MenuProps } from "./menu.types";
 
-interface Menu {
-  id: number;
-  title: string;
-}
-
-const MenuArray: Menu[] = [
+const MenuArray: MenuProps[] = [
   { id: 1, title: "Novidades" },
   { id: 2, title: "Sapatos" },
   { id: 3, title: "Sandálias" },

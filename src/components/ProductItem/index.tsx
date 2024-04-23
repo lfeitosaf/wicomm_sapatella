@@ -5,18 +5,7 @@ import SizesList from "../SizesList";
 import heartIcon from "../../assets/heart2.png";
 import pinkHeart from "../../assets/heart3.png";
 import { useState } from "react";
-
-interface ProductProps {
-  product: {
-    src: string;
-    alt: string;
-    size: number;
-    price: string;
-    formerPrice: string;
-    installments: string;
-  };
-  setCartCount?: any;
-}
+import { ProductProps } from "./product.types";
 
 const ProductItem = ({ product, setCartCount }: ProductProps) => {
   const theme = useTheme();

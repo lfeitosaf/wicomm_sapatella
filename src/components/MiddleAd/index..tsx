@@ -2,13 +2,7 @@ import * as S from "./style";
 import { useTheme } from "styled-components";
 import Text from "../Text";
 import { motion } from "framer-motion";
-
-interface ImageProps {
-  image: {
-    src: string;
-    alt: string;
-  };
-}
+import { ImageProps } from "./imageprops.types";
 
 const MiddleAd = ({ image }: ImageProps) => {
   const theme = useTheme();

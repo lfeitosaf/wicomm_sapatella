@@ -23,12 +23,16 @@ const globalStyle = createGlobalStyle`
         --swiper-pagination-bullet-horizontal-gap: 4px;
         --swiper-pagination-bullet-vertical-gap: 6px;
     }
+    .swiper-button-prev,.swiper-button-next {
+        top: 140px;
+    }
     .special-swiper .swiper-button-prev,
     .special-swiper .swiper-button-next {
         --swiper-navigation-size: 12px;
         background: #D3D3D3;
         width: 40px;
         height: 40px;
+        top: 280px;
         border-radius: 50%;
     }
 
