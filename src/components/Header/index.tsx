@@ -3,7 +3,7 @@ import Menu from "../Menu";
 import UserMenu from "../UserMenu";
 import * as S from "./styles";
 
-const Header = ({ cartCount }: number) => {
+const Header = ({ cartCount }: any) => {
   return (
     <S.Dashboard>
       <Logo />
