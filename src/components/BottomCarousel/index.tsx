@@ -5,7 +5,7 @@ import ProductItem from "../ProductItem";
 import * as S from "./styles";
 import { motion } from "framer-motion";
 
-const BottomCarousel = ({ setCartCount }) => {
+const BottomCarousel = ({ setCartCount }: any) => {
   return (
     <S.MainContainer>
       <S.SecondaryContainer>

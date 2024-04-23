@@ -6,4 +6,5 @@ export interface Favorite {
   price: string;
   formerPrice: string;
   installments: string;
+  setCartCount?: any;
 }

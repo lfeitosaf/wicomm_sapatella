@@ -14,8 +14,8 @@ interface ProductProps {
     price: string;
     formerPrice: string;
     installments: string;
-    setCartCount: any;
   };
+  setCartCount?: any;
 }
 
 const ProductItem = ({ product, setCartCount }: ProductProps) => {
