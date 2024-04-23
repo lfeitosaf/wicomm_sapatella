@@ -31,7 +31,7 @@ const SizesList = ({ setCartCount }: any) => {
   const numberArray = Array.from({ length: 9 }, (_, i) => i + 34);
 
   const addToCart = () => {
-    setCartCount((prevCount) => prevCount + 1);
+    setCartCount((prevCount: number) => prevCount + 1);
   };
 
   return (
