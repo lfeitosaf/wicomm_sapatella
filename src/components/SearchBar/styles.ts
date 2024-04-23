@@ -23,3 +23,5 @@ export const SearchInput = styled.input`
   outline: none;
   border: none;
 `;
+
+export const SearchIcon = styled(Icon)``;
