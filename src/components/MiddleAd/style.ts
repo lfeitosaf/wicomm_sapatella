@@ -14,7 +14,7 @@ export const MainDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative; /* Mudei para 'relative' */
+  position: relative;
   width: fit-content;
   margin: 0 auto;
   overflow: visible;

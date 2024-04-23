@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Icon from "../Icon";
 
 export const SearchForm = styled.form`
   height: 40px;
@@ -23,5 +22,3 @@ export const SearchInput = styled.input`
   outline: none;
   border: none;
 `;
-
-export const SearchIcon = styled(Icon)``;

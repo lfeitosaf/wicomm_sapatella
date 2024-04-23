@@ -1,11 +1,12 @@
 import * as S from "./styles";
 import SearchGlass from "../../assets/search.png";
+import Icon from "../Icon";
 
 const SearchBar = () => {
   return (
     <S.SearchForm>
       <S.SearchInput placeholder="Buscar" />
-      <S.SearchIcon src={SearchGlass} alt="Search Icon" margin="12px" />
+      <Icon src={SearchGlass} alt="Search Icon" margin="12px" />
     </S.SearchForm>
   );
 };
