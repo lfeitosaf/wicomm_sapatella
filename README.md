@@ -8,7 +8,9 @@ Projeto de um site para o teste prático de desenvolvedor front-end na Wicomm.
 - Tamanho e cor padronizados.
 - Componentes reutilizáveis seguindo o padrão de grandes projetos.
 
+## Deploy
 
+https://wicomm-sapatella-six.vercel.app
 ## Rode Localmente
 
 Realize o clone do projeto:
