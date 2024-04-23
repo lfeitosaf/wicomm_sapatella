@@ -5,7 +5,7 @@ export const FavoritesSection = styled.section`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 100px;
   padding-bottom: 50px;
   gap: 24px;
   ::-webkit-scrollbar {

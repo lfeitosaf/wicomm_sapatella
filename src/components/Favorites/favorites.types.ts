@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from "react";
+
 export interface Favorite {
   id: number;
   src: string;
@@ -8,3 +10,9 @@ export interface Favorite {
   installments: string;
   setCartCount?: any;
 }
+
+export type SetCartCount = Dispatch<SetStateAction<number>>;
+
+export type FavoritesProps = {
+  setCartCount: SetCartCount;
+};

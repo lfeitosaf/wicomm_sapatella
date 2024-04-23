@@ -6,12 +6,7 @@ import img1 from "../../assets/image 2.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css/autoplay";
-
-interface Image {
-  id: number;
-  src: string;
-  alt: string;
-}
+import { Image } from "./background.types";
 
 const ImagesArray: Image[] = [
   {
